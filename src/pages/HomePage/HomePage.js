@@ -6,7 +6,8 @@ import ReactPaginate from 'react-paginate';
 import React from 'react';
 import './HomePage.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { changePage, selectPagesCount } from '../../store/tasks/taskSlice';
+import { changePage } from '../../store/tasks/actions';
+import { selectPagesCount } from '../../store/tasks/taskSlice';
 
 const HomePage = () => {
   const dispatch = useDispatch();

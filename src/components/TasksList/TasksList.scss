@@ -1,3 +1,5 @@
 .tasks-row {
-  padding: 50px;
+  @media (min-width: 576px) {
+    padding: 50px;
+  }
 }

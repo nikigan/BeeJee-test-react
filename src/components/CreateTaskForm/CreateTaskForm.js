@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
-import { createNewTask } from '../../store/tasks/taskSlice';
+import { createNewTask } from '../../store/tasks/actions';
 
 const CreateTaskForm = ({ username, email, text }) => {
   const { register, handleSubmit, errors } = useForm();
@@ -31,7 +31,7 @@ const CreateTaskForm = ({ username, email, text }) => {
           required: true,
           minLength: 10
         })}/>
-        {errors.email && 'Необходимо ввести корректный адрес электронной почты'}
+        {errors.email && 'Необходимо ввести текст задачи'}
       </Form.Group>
       <Button variant="primary" type="submit" className="d-block ml-auto">
         Сохранить

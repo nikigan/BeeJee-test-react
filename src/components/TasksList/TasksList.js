@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllTasks, selectTasks } from '../../store/tasks/taskSlice';
+import { selectTasks } from '../../store/tasks/taskSlice';
 import React, { useEffect } from 'react';
 import TaskItem from '../TaskItem/TaskItem';
 import './TasksList.scss'
+import { getAllTasks } from '../../store/tasks/actions';
 
 const TasksList = () => {
 

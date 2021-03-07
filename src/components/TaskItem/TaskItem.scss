@@ -1,4 +1,14 @@
 .task-item {
-  height: 100%;
+  //height: 100%;
+  position: relative;
   padding: 15px 45px;
+  min-height: 190px;
+
+  &__done-mark {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 2em;
+    height: 2em;
+  }
 }

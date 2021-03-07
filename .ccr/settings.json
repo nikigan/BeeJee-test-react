@@ -1,0 +1,10 @@
+{
+	"test": false,
+	"css": true,
+	"index": false,
+	"default": true,
+	"cssType": "scss",
+	"templates": true,
+	"extendCwd": "/src/components/",
+	"verbose": true
+}
