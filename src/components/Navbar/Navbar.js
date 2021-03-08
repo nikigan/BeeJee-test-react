@@ -1,7 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { adminLogout } from '../store/auth/actions';
+import { adminLogout } from '../../store/auth/actions';
 
 const CustomNavbar = () => {
   const loggedIn = useSelector(state => state.auth.loggedIn);

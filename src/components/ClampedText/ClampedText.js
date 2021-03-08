@@ -16,10 +16,12 @@ const ClampedText = ({ text, amountOfCharacters = 50, ...rest }) => {
   }
 
   return (
-    <p { ...rest }>
-      { textToRender }
-      { otherText.length > 0 && !showText && (<span className="more-btn" onClick={() => setTextVisibility(true)}>...</span>) }
-      { showText && otherText }
+    <p className="clamped-text"
+       {...rest}>
+      {textToRender}
+      {otherText.length > 0 && !showText && (
+        <span className="more-btn" onClick={() => setTextVisibility(true)}>...</span>)}
+      {showText && otherText}
     </p>
   );
 }

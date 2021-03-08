@@ -1,13 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+  visible: false,
+  currentTask: null,
+  edit: false
+};
+
 export const formSlice = createSlice({
   name: 'form',
-  initialState: {
-    visible: false
-  },
+  initialState,
   reducers: {
-    makeVisible: state => { state.visible = true },
-    makeInvisible: state => { state.visible = false }
+    makeVisible: (state, action) => {
+      state.visible = true;
+      state.currentTask = action.payload;
+      if (action.payload) {
+        state.edit = true;
+      }
+    },
+    makeInvisible: state => initialState
   }
 });
 

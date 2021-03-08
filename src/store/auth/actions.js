@@ -6,21 +6,26 @@ export const loginAdmin = (data, history) => async dispatch => {
   try {
     const { data: response } = await login(data);
 
-    if (response.status !== "error") {
+    if (response.status !== 'error') {
       dispatch(authSuccess());
       localStorage.setItem('token', response.message.token);
       history.push('/');
 
     } else {
-      dispatch(authError(response.message.password))
+      dispatch(authError(response.message.password));
     }
 
   } catch (error) {
-    dispatch(authError(error.data.message))
+    dispatch(authError(error.data.message));
   }
 };
 
 export const adminLogout = () => dispatch => {
   dispatch(logout());
   localStorage.removeItem('token');
-}
+};
+
+export const tokenError = () => dispatch => {
+  dispatch(adminLogout());
+
+};
